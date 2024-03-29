@@ -10,21 +10,44 @@
     padding: 40px 20px;
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: lightpink ;
 }
 
 .item p{
     margin:0px;
     width: 70%;
+    box-shadow:  0 .5rem 1rem rgba(0,0,0,.15)!important;;
 }
 .item span{
     width: 15%;
     text-align: center;
-    color: green;
     cursor: pointer;
     font-weight: 900;
+    background-color: rgba(0,0,0,0);
 }
 .delete{
     position: relative;
     top: -58px;
+    color: gray !important;;
+}
+.delete:hover{
     color: red !important;;
+}
+
+.completed{
+    text-decoration: line-through;
+    color:gray
+}
+
+.completed-icon{
+    color: green;
+
+}
+.incompleted-icon{
+    color: gray;
+    
+}
+.incompleted-icon:hover{
+    color: green;
+    
 }

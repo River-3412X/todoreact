@@ -1,0 +1,70 @@
+Aqui van las notas del curso bro del futuro..!!
+
+Las props se mandan al llamar al componente:
+
+< TodoCount completed={2} total={34} />
+
+son como propiedades
+
+<ReactFragment></ReactFragment> esto es igual a: 
+<></>
+-----
+
+localStorage:
+LocalStorage en React:
+
+LocalStorage es una característica del navegador que permite a las aplicaciones web almacenar datos de forma persistente en el navegador. Estos datos se conservan incluso cuando se cierra la pestaña del navegador o se reinicia la computadora. En React, LocalStorage se utiliza comúnmente para almacenar y recuperar información importante del usuario, como configuraciones, preferencias o datos temporales.
+
+Principales Conceptos:
+
+Almacenamiento de Datos:
+
+Persistencia de Datos:
+
+
+En una aplicación React, LocalStorage se utiliza comúnmente para:
+
+Guardar Preferencias del Usuario:
+
+Guardar configuraciones personalizadas, temas o preferencias del usuario para que se mantengan entre sesiones.
+Persistir Datos Temporales:
+
+Mantener datos temporales, como formularios no completados, incluso si la página se recarga.
+Manejar Sesiones de Usuario:
+
+Almacenar información sobre la sesión del usuario para mantenerlo autenticado incluso después de cerrar y volver a abrir la aplicación.
+Métodos: 
+
+localStorage.setItem("clave","valor");
+
+localStorage.getItem("clave");
+
+localStorage.removeItem("clave");
+
+localStorage solo puede almacenar string o cadenas de texto, para convertir estructuras de datos complejas como los arrays, usar 
+JSON.stringify( datos ) y para leerlo solo hay que parsearlo
+
+***** CUSTOM HOOKS  
+
+los custom hooks se encargan de separar la logica de la vista,
+agrupando los componentes en una funcion y dentro de esta funcion 
+poner las funciones fleca que sean necesarias para el funcionamiento.
+
+**EFECTOS 
+son funciones que se ejecutan despues de realizar el renderizado,normalmente se 
+utilizan para evitar que el usuario espere antes de que se renderice la aplicación.
+se utlizan comunmente cuando el renderizado depende de una aplicación externa, una api o algo similar
+
+El comportamiento sin un array de dependencias y con un array de dependencias vacío [] son diferentes:
+
+useEffect(() => {
+  // Esto se ejecuta después de cada renderizado
+});
+
+useEffect(() => {
+  // Esto sólo se ejecuta en el montaje (cuando el componente aparece)
+}, []);
+
+useEffect(() => {
+  // Esto se ejecuta en el montaje *y también* si a o b han cambiado desde el último renderizado
+}, [a, b]);

@@ -6,16 +6,14 @@ const estilos={
 }
 function TodoCounter({completed,total}) {
   return (
+    total==completed?
     <h1 style={estilos}>
-      Has completado 
-      <strong 
-        style={{
-          color:"brown"
-        }}>{completed}</strong>  de 
-      <strong 
-        style={{
-          color:"brown"
-        }}>{total}</strong> TODOS
+      <strong>Haz Completado todas las Tareas!</strong>
+    </h1>
+
+    :
+    <h1 style={estilos}>
+      Has completado <strong>{completed}</strong>  de <strong >{total}</strong> TODOS
     </h1>
   )
 }
